@@ -531,7 +531,7 @@ class CSharpGenerator : public BaseGenerator {
       code += "partial ";
     }
 
-    code += struct_def.attributes.Lookup("csharp_class") ? "class " : "struct ";
+    code += struct_def.attributes.Lookup("csharp_class") ? "sealed class " : "struct ";
     code += struct_def.name;
     code += " : IFlatbufferObject";
     code += "\n{\n";
